@@ -5,6 +5,8 @@ import Eventos from './Pages/Eventos';
 // import Artistas from './Pages/Artistas';
  import Registrarse from './Pages/Registrarse'
 import Entradas from './Pages/Entradas';
+import Login from './Pages/Login';
+import Contactos from './Pages/Contactos';
 
 // import Contacto from './Pages/Contacto';
 
@@ -16,8 +18,8 @@ const App = () => {
         <Route path="/eventos" element={<Eventos />} />
         <Route path="/entradas" element={<Entradas />} />
         <Route path="/registrarse" element={<Registrarse />} />
-        {/* <Route path="/artistas" element={<Artistas />} />
-        <Route path="/contacto" element={<Contacto />} />  */}
+        <Route path="/login" element={<Login />} />  
+         <Route path="/contacto" element={<Contactos />} /> 
       </Routes>
     </BrowserRouter>
   );

@@ -3,40 +3,43 @@ import { Music, Headphones, Ticket } from 'lucide-react';
 
 /**
  * Componente funcional que representa una sección de información sobre un evento.
- * Incluye imágenes del evento con íconos y un botón para comprar entradas.
- * También cambia el color de los íconos al pasar el mouse sobre el botón.
+ * Incluye imágenes del evento con íconos, información superpuesta y un botón para comprar entradas.
+ * Las imágenes tienen un efecto de hover que muestra información adicional.
  */
 const EventInfoSection = () => {
   // Estado que controla si el botón "Entradas" está siendo hovereado
   const [isHovered, setIsHovered] = useState(false);
 
-  // Array de objetos que contiene las imágenes del evento con su fuente, descripción y texto alternativo
+  // Array de objetos que contiene las imágenes del evento con su fuente, descripción, texto alternativo e información adicional
   const eventImages = [
     {
       source: 'https://img.freepik.com/fotos-premium/chica-moderna-moda-auriculares-musica-fiesta-divertida-bailando-luces-neon-cultura-juvenil-vibrante-estilo-cyberpunk_187882-7371.jpg',
       alt: 'Concierto juvenil',
-      description: 'Concierto para jóvenes'
+      description: 'Concierto para jóvenes',
+      additionalInfo: 'Fecha: 15 de Octubre, 2024\nLugar: Estadio Central'
     },
     {
       source: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH6shgPCQBrFbtanyhB1Z4QWwHIvgPQIrhAQ&s',
       alt: 'Diademas para concierto',
-      description: 'Diademas para una experiencia única'
+      description: 'Diademas para una experiencia única',
+      additionalInfo: 'Tecnología LED sincronizada\nBatería de larga duración'
     },
     {
       source: 'https://wallpapers.com/images/hd/club-party-background-1385ekvfxrhz9l14.jpg',
       alt: 'Entradas del evento',
-      description: 'Entradas con diademas incluidas'
+      description: 'Entradas con diademas incluidas',
+      additionalInfo: 'Precio: $50 - $150\nIncluye acceso VIP'
     }
   ];
 
   /**
    * Retorna la estructura JSX de la sección de información del evento.
-   * Incluye un encabezado, una cuadrícula de imágenes con íconos y un botón interactivo.
+   * Incluye un encabezado, una cuadrícula de imágenes con íconos, información superpuesta y un botón interactivo.
    */
   return (
     <div className="bg-black text-white py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl font-extrabold text-center mb-8">Información del Evento</h2>
+        <h2 className="text-3xl font-extrabold text-center mb-8 text-purple-500">Información del Evento</h2>
         {/* Sección de imágenes organizadas en una cuadrícula */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {eventImages.map((image, index) => (
@@ -48,10 +51,21 @@ const EventInfoSection = () => {
               
               {/* Título y descripción de cada imagen */}
               <h3 className="text-xl font-semibold mb-2">{image.description}</h3>
-              <p className="text-center">{image.description.split(' ').slice(1).join(' ')}</p> {/* Muestra el texto de la descripción sin la primera palabra */}
+              <p className="text-center">{image.description.split(' ').slice(1).join(' ')}</p>
               
-              {/* Imagen del evento */}
-              <img src={image.source} alt={image.alt} className="mt-4 rounded-lg shadow-lg w-full h-48 object-cover" />
+              {/* Contenedor de la imagen con efecto hover */}
+              <div className="relative mt-4 overflow-hidden rounded-lg shadow-lg group">
+                {/* Imagen del evento */}
+                <img src={image.source} alt={image.alt} className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110" />
+                
+                {/* Capa de información superpuesta */}
+                <div className="absolute inset-0 bg-black bg-opacity-75 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="text-white text-center p-4">
+                    <h4 className="text-lg font-bold mb-2">{image.description}</h4>
+                    <p className="text-sm whitespace-pre-line">{image.additionalInfo}</p>
+                  </div>
+                </div>
+              </div>
             </div>
           ))}
         </div>

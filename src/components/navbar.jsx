@@ -33,7 +33,7 @@ const Navbar = () => {
               <Link to="/eventos" className="hover:bg-purple-700 px-3 py-2 rounded-md text-sm font-medium">Eventos</Link>
               <Link to="/entradas" className="hover:bg-purple-700 px-3 py-2 rounded-md text-sm font-medium">Entradas</Link>
               <Link to="/registrarse" className="hover:bg-purple-700 px-3 py-2 rounded-md text-sm font-medium">Registrarse</Link>
-              <Link to="/contacto" className="hover:bg-purple-700 px-3 py-2 rounded-md text-sm font-medium">Inicio de Sesion</Link>
+              <Link to="/login" className="hover:bg-purple-700 px-3 py-2 rounded-md text-sm font-medium">Inicio de Sesion</Link>
               <Link to="/contacto" className="hover:bg-purple-700 px-3 py-2 rounded-md text-sm font-medium">Contactos</Link>
             </div>
           </div>

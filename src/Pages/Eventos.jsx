@@ -3,7 +3,7 @@ import CorporationInfo from "../components/CorporationInfo";
 import CountdownTimer from "../components/CountdownTimer";
 import EventInfoSection from "../components/EventInfoSection";
 import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/navbar";
 import ConcertEvent from "../components/ConcertEvent";
 
 const Eventos = () => {
@@ -16,7 +16,6 @@ const Eventos = () => {
         <CountdownTimer />
         </div>
       </AnimatedBackground2>
-     
       <ConcertEvent />
       <CorporationInfo />
       <Footer />

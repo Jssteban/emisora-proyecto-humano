@@ -2,11 +2,35 @@ import React from 'react';
 
 /**
  * Componente CorporationInfo que muestra información sobre la Corporación Nuevo Talento Humano,
- * incluyendo una descripción y una galería de imágenes.
+ * incluyendo una descripción y una galería de imágenes con efectos de hover.
  * 
  * @returns {JSX.Element} El componente de información de la corporación.
  */
 const CorporationInfo = () => {
+    // Array de objetos que contiene las imágenes de la galería con su fuente, texto alternativo e información adicional
+    const galleryImages = [
+        {
+            src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDJjB2MuxDxqyldBeAxvBW2xbFLJVkM322WA&s",
+            alt: "Imagen 1",
+            info: "Descripción de la Imagen 1"
+        },
+        {
+            src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiAwAU4ymtyu7pjnn9yh0AV76qPHAtTydC2w&s",
+            alt: "Imagen 2",
+            info: "Descripción de la Imagen 2"
+        },
+        {
+            src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTs_ptligSgrNz6krBLWv0fhfJyaHiIUUOGzg&s",
+            alt: "Imagen 3",
+            info: "Descripción de la Imagen 3"
+        },
+        {
+            src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAeP3u_T4mB7_HTGDFzIaa3z3VbWsNnNJh1UISUEShv0q6Nqh5S2cxfmf8Fc5N4QR-xuM&usqp=CAU",
+            alt: "Imagen 4",
+            info: "Descripción de la Imagen 4"
+        }
+    ];
+
     return (
         <div className="bg-black text-white p-8 text-center">
             {/* Sección de logo y título */}
@@ -14,7 +38,7 @@ const CorporationInfo = () => {
                 <img 
                     src="https://yt3.googleusercontent.com/ytc/AIdro_lmtQy50fgfWqKeNyiVHuWASOhIr8ROoig6a4IJC1ClsKc=s900-c-k-c0x00ffffff-no-rj" 
                     alt="Corporación Logo" 
-                    className="w-16 h-16 mr-4" // Tamaño del logo ajustado
+                    className="w-16 h-16 mr-4 rounded-full object-cover" // Logo redondo
                 />
                 <h2 className="text-4xl font-bold text-purple-500">Corporación Nuevo Talento Humano</h2>
             </div>
@@ -35,26 +59,19 @@ const CorporationInfo = () => {
 
             {/* Sección de galería de imágenes */}
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center">
-                <img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDJjB2MuxDxqyldBeAxvBW2xbFLJVkM322WA&s"
-                    alt="Imagen 1"
-                    className="rounded-lg shadow-lg w-48 h-auto"
-                />
-                <img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiAwAU4ymtyu7pjnn9yh0AV76qPHAtTydC2w&s"
-                    alt="Imagen 2"
-                    className="rounded-lg shadow-lg w-48 h-auto"
-                />
-                <img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTs_ptligSgrNz6krBLWv0fhfJyaHiIUUOGzg&s"
-                    alt="Imagen 3"
-                    className="rounded-lg shadow-lg w-48 h-auto"
-                />
-                <img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAeP3u_T4mB7_HTGDFzIaa3z3VbWsNnNJh1UISUEShv0q6Nqh5S2cxfmf8Fc5N4QR-xuM&usqp=CAU"
-                    alt="Imagen 4"
-                    className="rounded-lg shadow-lg w-48 h-auto"
-                />
+                {galleryImages.map((image, index) => (
+                    <div key={index} className="relative overflow-hidden rounded-lg shadow-lg group">
+                        <img
+                            src={image.src}
+                            alt={image.alt}
+                            className="w-48 h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+                        />
+                        {/* Capa de información superpuesta */}
+                        <div className="absolute inset-0 bg-black bg-opacity-75 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p className="text-white text-center p-2">{image.info}</p>
+                        </div>
+                    </div>
+                ))}
             </div>
         </div>
     );

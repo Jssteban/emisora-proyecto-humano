@@ -8,14 +8,14 @@ import React from 'react';
  * 
  * @returns {JSX.Element} El componente AnimatedBackground2.
  */
-const AnimatedBackground2 = ({ children }) => {
+const AnimatedBackground3 = ({ children }) => {
   return (
     <div className="relative min-h-screen overflow-hidden">
       {/* Fondo animado */}
       <div 
         className="absolute inset-0 bg-cover bg-center animate-kenBurns"
         style={{
-          backgroundImage: "url('https://wallpapers.com/images/hd/live-concert-party-ft6boesubjrhdbfk.jpg')",
+          backgroundImage: "url('https://www.bizneo.com/blog/wp-content/uploads/2020/04/gestion-del-talento-humano.webp')",
           filter: 'contrast(1.1) brightness(1.1)',
         }}
       ></div>
@@ -43,4 +43,4 @@ const AnimatedBackground2 = ({ children }) => {
   );
 };
 
-export default AnimatedBackground2;
+export default AnimatedBackground3;

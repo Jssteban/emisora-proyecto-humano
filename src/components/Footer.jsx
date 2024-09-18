@@ -1,40 +1,60 @@
 import React from 'react';
-import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'; // Importamos los íconos
+import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6'; // Importamos el ícono de X (Twitter)
 
 /**
  * Componente funcional que representa el pie de página del sitio.
- * Incluye enlaces a redes sociales y un texto de derechos reservados.
+ * Incluye enlaces a páginas del sitio, redes sociales y un texto de derechos reservados.
  */
 const Footer = () => {
     return (
         <footer className="bg-black text-white p-6">
-            <div className="container mx-auto text-center">
-                {/* Título de la sección de redes sociales */}
-                <h4 className="text-lg font-semibold mb-4 text-purple-700">Síguenos en nuestras redes sociales</h4>
-                
-                {/* Sección de iconos de redes sociales */}
-                <div className="flex justify-center space-x-6 mb-4">
-                    {/* Enlaces a las redes sociales */}
-                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-                        {/* Ícono de Facebook */}
-                        <FaFacebook className="text-2xl text-blue-500 hover:text-blue-700" />
-                    </a>
-                    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-                        {/* Ícono de Instagram */}
-                        <FaInstagram className="text-2xl text-pink-500 hover:text-pink-700" />
-                    </a>
-                    <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-                        {/* Ícono de Twitter */}
-                        <FaTwitter className="text-2xl text-blue-400 hover:text-blue-600" />
-                    </a>
-                    <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
-                        {/* Ícono de YouTube */}
-                        <FaYoutube className="text-2xl text-red-500 hover:text-red-700" />
-                    </a>
+            <div className="container mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {/* Columna de información del sitio */}
+                    <div>
+                        <h4 className="text-lg font-semibold mb-4 text-purple-500">Corporación Nuevo Talento Humano</h4>
+                        <p className="text-sm">Desarrollando el potencial humano para un futuro mejor.</p>
+                    </div>
+
+                    {/* Columna de enlaces a páginas */}
+                    <div>
+                        <h4 className="text-lg font-semibold mb-4 text-purple-500">Enlaces Rápidos</h4>
+                        <ul className="text-sm space-y-2">
+                            <li><a href="#" className="hover:text-purple-400 transition-colors">Inicio</a></li>
+                            <li><a href="#" className="hover:text-purple-400 transition-colors">Sobre Nosotros</a></li>
+                            <li><a href="#" className="hover:text-purple-400 transition-colors">Servicios</a></li>
+                            <li><a href="#" className="hover:text-purple-400 transition-colors">Contacto</a></li>
+                        </ul>
+                    </div>
+
+                    {/* Columna de redes sociales */}
+                    <div>
+                        <h4 className="text-lg font-semibold mb-4 text-purple-500">Síguenos</h4>
+                        <div className="flex space-x-4">
+                            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400 transition-colors">
+                                <FaFacebook className="text-2xl" />
+                            </a>
+                            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400 transition-colors">
+                                <FaInstagram className="text-2xl" />
+                            </a>
+                            <a href="https://www.x.com" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400 transition-colors">
+                                <FaXTwitter className="text-2xl" />
+                            </a>
+                            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" className="hover:text-purple-400 transition-colors">
+                                <FaYoutube className="text-2xl" />
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                
+
+                {/* Línea divisoria */}
+                <hr className="my-6 border-gray-700" />
+
                 {/* Texto de derechos reservados */}
-                <p className="text-sm">© 2024 Corporación Nuevo Talento Humano. Todos los derechos reservados.</p>
+                <div className="text-center text-sm">
+                    <p>© 2024 Corporación Nuevo Talento Humano. Todos los derechos reservados.</p>
+                </div>
             </div>
         </footer>
     );
