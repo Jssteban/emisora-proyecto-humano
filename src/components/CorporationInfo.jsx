@@ -1,18 +1,25 @@
 import React from 'react';
 
+/**
+ * Componente CorporationInfo que muestra información sobre la Corporación Nuevo Talento Humano,
+ * incluyendo una descripción y una galería de imágenes.
+ * 
+ * @returns {JSX.Element} El componente de información de la corporación.
+ */
 const CorporationInfo = () => {
     return (
         <div className="bg-black text-white p-8 text-center">
-           
+            {/* Sección de logo y título */}
             <div className="flex items-center justify-center mb-4">
                 <img 
                     src="https://yt3.googleusercontent.com/ytc/AIdro_lmtQy50fgfWqKeNyiVHuWASOhIr8ROoig6a4IJC1ClsKc=s900-c-k-c0x00ffffff-no-rj" 
                     alt="Corporación Logo" 
-                    className="w-16 h-16 mr-4" // Ajusta el tamaño según tus necesidades
+                    className="w-16 h-16 mr-4" // Tamaño del logo ajustado
                 />
                 <h2 className="text-4xl font-bold text-purple-500">Corporación Nuevo Talento Humano</h2>
             </div>
 
+            {/* Sección de descripción */}
             <div className="mb-8">
                 <p className="mb-4">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -26,7 +33,7 @@ const CorporationInfo = () => {
                 </p>
             </div>
 
-            {/* Sección de imágenes centradas */}
+            {/* Sección de galería de imágenes */}
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 justify-items-center">
                 <img
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDJjB2MuxDxqyldBeAxvBW2xbFLJVkM322WA&s"

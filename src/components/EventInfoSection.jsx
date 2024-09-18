@@ -1,9 +1,16 @@
 import React, { useState } from 'react';
 import { Music, Headphones, Ticket } from 'lucide-react';
 
+/**
+ * Componente funcional que representa una sección de información sobre un evento.
+ * Incluye imágenes del evento con íconos y un botón para comprar entradas.
+ * También cambia el color de los íconos al pasar el mouse sobre el botón.
+ */
 const EventInfoSection = () => {
+  // Estado que controla si el botón "Entradas" está siendo hovereado
   const [isHovered, setIsHovered] = useState(false);
 
+  // Array de objetos que contiene las imágenes del evento con su fuente, descripción y texto alternativo
   const eventImages = [
     {
       source: 'https://img.freepik.com/fotos-premium/chica-moderna-moda-auriculares-musica-fiesta-divertida-bailando-luces-neon-cultura-juvenil-vibrante-estilo-cyberpunk_187882-7371.jpg',
@@ -22,29 +29,40 @@ const EventInfoSection = () => {
     }
   ];
 
+  /**
+   * Retorna la estructura JSX de la sección de información del evento.
+   * Incluye un encabezado, una cuadrícula de imágenes con íconos y un botón interactivo.
+   */
   return (
     <div className="bg-black text-white py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl font-extrabold text-center mb-8">Información del Evento</h2>
+        {/* Sección de imágenes organizadas en una cuadrícula */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {eventImages.map((image, index) => (
             <div key={index} className="flex flex-col items-center">
+              {/* Ícono que cambia de color al hoverear el botón */}
               {index === 0 && <Music className={`w-12 h-12 mb-4 transition-colors duration-300 ${isHovered ? 'text-purple-500' : 'text-white'}`} />}
               {index === 1 && <Headphones className={`w-12 h-12 mb-4 transition-colors duration-300 ${isHovered ? 'text-purple-500' : 'text-white'}`} />}
               {index === 2 && <Ticket className={`w-12 h-12 mb-4 transition-colors duration-300 ${isHovered ? 'text-purple-500' : 'text-white'}`} />}
+              
+              {/* Título y descripción de cada imagen */}
               <h3 className="text-xl font-semibold mb-2">{image.description}</h3>
-              <p className="text-center">{image.description.split(' ').slice(1).join(' ')}</p> {/* Display additional text except first word */}
+              <p className="text-center">{image.description.split(' ').slice(1).join(' ')}</p> {/* Muestra el texto de la descripción sin la primera palabra */}
+              
+              {/* Imagen del evento */}
               <img src={image.source} alt={image.alt} className="mt-4 rounded-lg shadow-lg w-full h-48 object-cover" />
             </div>
           ))}
         </div>
+        {/* Botón interactivo que cambia de color al pasar el mouse */}
         <div className="text-center">
           <button
             className="bg-white text-black font-bold py-2 px-4 rounded-full hover:bg-purple-700 hover:text-white transition duration-300"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
-            Más Información
+            Entradas
           </button>
         </div>
       </div>
