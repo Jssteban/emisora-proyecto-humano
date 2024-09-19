@@ -1,7 +1,16 @@
 import React from 'react';
 import { Headphones, Calendar, MapPin } from 'lucide-react';
 
+/**
+ * Componente ConcertEvent
+ *
+ * Este componente funcional de React muestra un evento de concierto con una galería de imágenes, 
+ * detalles del evento, y un botón para reservar entradas. Cada imagen de la galería tiene un efecto 
+ * de hover que muestra el título y la descripción del concierto. También se muestra información clave 
+ * del evento, como la fecha, la ubicación y la opción de traer auriculares.
+ */
 const ConcertEvent = () => {
+  // Array con las imágenes del concierto, incluyendo su URL, título y descripción
   const concertImages = [
     {
       url: "https://www.rockandpop.cl/wp-content/uploads/2022/06/fiesta.jpg",
@@ -26,18 +35,25 @@ const ConcertEvent = () => {
   ];
 
   return (
+    // Contenedor principal con fondo negro y texto blanco
     <div className="bg-black text-white min-h-screen flex flex-col items-center justify-center p-8">
+      
+      {/* Título del evento */}
       <h1 className="text-4xl font-bold mb-6">Evento</h1>
       
+      {/* Galería de imágenes del concierto */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl mb-8">
         {concertImages.map((image, index) => (
           <div key={index} className="relative overflow-hidden rounded-lg group">
+            {/* Imagen del concierto */}
             <img 
               src={image.url}
               alt={`Imagen del concierto ${index + 1}`} 
               className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
             />
+            {/* Efecto de hover: fondo morado semi-transparente */}
             <div className="absolute inset-0 bg-purple-600 opacity-0 group-hover:opacity-75 transition-opacity duration-300"></div>
+            {/* Efecto de hover: texto con título y descripción */}
             <div className="absolute inset-0 flex flex-col justify-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <h3 className="text-lg font-bold mb-1">{image.title}</h3>
               <p className="text-sm">{image.description}</p>
@@ -46,10 +62,12 @@ const ConcertEvent = () => {
         ))}
       </div>
       
+      {/* Descripción general del evento */}
       <p className="text-xl mb-8 text-center max-w-xl">
         Experimenta la música como nunca antes en nuestro concierto exclusivo con auriculares.
       </p>
       
+      {/* Detalles del evento (auriculares, fecha y ubicación) */}
       <div className="flex flex-col md:flex-row items-center justify-center mb-8 space-y-4 md:space-y-0 md:space-x-8">
         <div className="flex items-center">
           <Headphones size={24} className="text-purple-400 mr-2" />
@@ -65,6 +83,7 @@ const ConcertEvent = () => {
         </div>
       </div>
       
+      {/* Botón para reservar entradas */}
       <button className="bg-purple-600 text-white px-8 py-3 rounded-full text-lg font-bold hover:bg-purple-700 transition-colors">
         Reserva tu entrada
       </button>

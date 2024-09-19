@@ -1,7 +1,7 @@
 import LoginConcert from "../components/LoginConcert";
 import AnimatedBackground2 from "../components/AnimatedBackground2";
 import Footer from "../components/Footer";
-import Navbar from "../components/navbar";
+import Navbar from "../components/Navbar";
 
 
 

@@ -7,6 +7,8 @@ import Eventos from './Pages/Eventos';
 import Entradas from './Pages/Entradas';
 import Login from './Pages/Login';
 import Contactos from './Pages/Contactos';
+import Emisora from './Pages/Emisora';
+
 
 // import Contacto from './Pages/Contacto';
 
@@ -19,7 +21,8 @@ const App = () => {
         <Route path="/entradas" element={<Entradas />} />
         <Route path="/registrarse" element={<Registrarse />} />
         <Route path="/login" element={<Login />} />  
-         <Route path="/contacto" element={<Contactos />} /> 
+         <Route path="/contacto" element={<Contactos />} />
+         <Route path="/emisora" element={<Emisora />} />
       </Routes>
     </BrowserRouter>
   );
