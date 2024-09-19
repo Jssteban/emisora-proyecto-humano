@@ -2,7 +2,7 @@ import AnimatedBackground3 from "../components/AnimatedBackground3";
 import CorporationInfo from "../components/CorporationInfo";
 import Aboutus from "../components/Aboutus";
 import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/navbar";
 import FundacionInfoSection from "../components/FundacionInfoSection";
 import ContactForm from "../components/ContactForm";
 

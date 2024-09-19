@@ -1,6 +1,6 @@
 import React from 'react';
 import { Radio, Volume2 } from 'lucide-react';
-import Navbar from '../components/Navbar';
+import Navbar from '../components/navbar';
 import Footer from '../components/Footer';
 
 /**
