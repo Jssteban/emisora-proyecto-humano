@@ -156,7 +156,7 @@ const RegistrationConcert = () => {
 
                 {/* Campo de selección para el tipo de entrada */}
                 <div className="mb-6">
-                    <label htmlFor="tipoEntrada" className="block text-purple-500 font-bold mb-2">Tipo de Entrada</label>
+                    {/* <label htmlFor="tipoEntrada" className="block text-purple-500 font-bold mb-2">Tipo de Entrada</label>
                     <select
                         id="tipoEntrada"
                         name="tipoEntrada"
@@ -167,7 +167,7 @@ const RegistrationConcert = () => {
                         <option value="general">General</option>
                         <option value="vip">VIP</option>
                         <option value="platinum">Platinum</option>
-                    </select>
+                    </select> */}
                 </div>
 
                 {/* Botón de envío del formulario */}

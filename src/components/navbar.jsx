@@ -14,7 +14,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <span className="font-bold text-xl mr-2">🎵</span>
-            <span className="font-bold text-xl">SinNombre</span>
+            <span className="font-bold text-xl">Eter</span>
           </div>
           
           <div className="hidden md:block">
