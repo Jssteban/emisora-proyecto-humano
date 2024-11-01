@@ -51,16 +51,16 @@ const CountdownTimer = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen text-white">
       {/* Título del evento */}
-      <h2 className="text-4xl font-bold mb-8 animate-pulse text-shadow-lg">Próximo Evento</h2>
+      <h2 className="text-4xl font-bold mb-8 animate-pulse text-shadow-lg">Esperando Informacion</h2>
       
       {/* Fecha del evento */}
-      <p className="text-2xl mb-4 animate-pulse text-shadow-md">15 de Octubre, 2024</p>
+      <p className="text-2xl mb-4 animate-pulse text-shadow-md">Esperando Informacion</p>
       
       {/* Lugar del evento */}
-      <p className="text-xl mb-8 animate-pulse text-shadow-md">Lugar: Por confirmar</p>
+      <p className="text-xl mb-8 animate-pulse text-shadow-md">Esperando Informacion</p>
 
       {/* Sección que muestra el tiempo restante */}
-      <div className="flex space-x-4 mb-8">
+      {/* <div className="flex space-x-4 mb-8">
         {['dias', 'horas', 'minutos', 'segundos'].map((unit) => (
           <div key={unit} className="flex flex-col items-center">
             <span className="text-5xl font-bold animate-pulse text-shadow-xl">{timeLeft[unit]}</span>
@@ -69,12 +69,12 @@ const CountdownTimer = () => {
             </span>
           </div>
         ))}
-      </div>
+      </div> */}
 
       {/* Botón para el evento */}
-      <Link to="/emisora" className="px-6 py-3 bg-purple-600 text-white font-bold rounded-full hover:bg-purple-700 transition duration-300">
+      {/* <Link to="/emisora" className="px-6 py-3 bg-purple-600 text-white font-bold rounded-full hover:bg-purple-700 transition duration-300">
         Concierto
-      </Link>
+      </Link> */}
     </div>
   );
 };

@@ -18,7 +18,7 @@ const Inicio = () => {
                 <Navbar />
 
                 {/* Fondo animado que ocupa el espacio restante */}
-                <AnimatedBackground className="flex-grow">
+                <AnimatedBackground className="flex-grow" >
                     <div className="pt-16 flex-grow">
                         {/* Temporizador de cuenta regresiva */}
                         <CountdownTimer />

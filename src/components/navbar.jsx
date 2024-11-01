@@ -20,8 +20,8 @@ const Navbar = () => {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               <Link to="/" className="hover:bg-purple-700 px-3 py-2 rounded-md text-sm font-medium">Inicio</Link>
-              <Link to="/eventos" className="hover:bg-purple-700 px-3 py-2 rounded-md text-sm font-medium">Eventos</Link>
-              <Link to="/entradas" className="hover:bg-purple-700 px-3 py-2 rounded-md text-sm font-medium">Entradas</Link>
+              {/* <Link to="/eventos" className="hover:bg-purple-700 px-3 py-2 rounded-md text-sm font-medium">Eventos</Link>
+              <Link to="/entradas" className="hover:bg-purple-700 px-3 py-2 rounded-md text-sm font-medium">Entradas</Link> */}
               <Link to="/registrarse" className="hover:bg-purple-700 px-3 py-2 rounded-md text-sm font-medium">Registrarse</Link>
               <Link to="/login" className="hover:bg-purple-700 px-3 py-2 rounded-md text-sm font-medium">Inicio de Sesion</Link>
               <Link to="/contacto" className="hover:bg-purple-700 px-3 py-2 rounded-md text-sm font-medium">Contactos</Link>
@@ -47,8 +47,8 @@ const Navbar = () => {
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <Link to="/" className="block hover:bg-purple-700 px-3 py-2 rounded-md text-base font-medium">Inicio</Link>
-            <Link to="/eventos" className="block hover:bg-purple-700 px-3 py-2 rounded-md text-base font-medium">Eventos</Link>
-            <Link to="/entradas" className="block hover:bg-purple-700 px-3 py-2 rounded-md text-base font-medium">Entradas</Link>
+            {/* <Link to="/eventos" className="block hover:bg-purple-700 px-3 py-2 rounded-md text-base font-medium">Eventos</Link>
+            <Link to="/entradas" className="block hover:bg-purple-700 px-3 py-2 rounded-md text-base font-medium">Entradas</Link> */}
             <Link to="/registrarse" className="block hover:bg-purple-700 px-3 py-2 rounded-md text-base font-medium">Registrarse</Link>
             <Link to="/login" className="block hover:bg-purple-700 px-3 py-2 rounded-md text-base font-medium">Inicio de Sesion</Link>
             <Link to="/contacto" className="block hover:bg-purple-700 px-3 py-2 rounded-md text-base font-medium">Contactos</Link>
