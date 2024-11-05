@@ -60,7 +60,7 @@ const CountdownTimer = () => {
       <p className="text-xl mb-8 animate-pulse text-shadow-md">Esperando Informacion</p>
 
       {/* Sección que muestra el tiempo restante */}
-      {/* <div className="flex space-x-4 mb-8">
+       <div className="flex space-x-4 mb-8">
         {['dias', 'horas', 'minutos', 'segundos'].map((unit) => (
           <div key={unit} className="flex flex-col items-center">
             <span className="text-5xl font-bold animate-pulse text-shadow-xl">{timeLeft[unit]}</span>
@@ -69,12 +69,12 @@ const CountdownTimer = () => {
             </span>
           </div>
         ))}
-      </div> */}
+      </div> 
 
       {/* Botón para el evento */}
-      {/* <Link to="/emisora" className="px-6 py-3 bg-purple-600 text-white font-bold rounded-full hover:bg-purple-700 transition duration-300">
-        Concierto
-      </Link> */}
+       <Link to="/emisora" className="px-6 py-3 bg-purple-600 text-white font-bold rounded-full hover:bg-purple-700 transition duration-300">
+        Donar Ahora
+      </Link> 
     </div>
   );
 };

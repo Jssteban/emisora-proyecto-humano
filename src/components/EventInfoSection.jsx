@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Music, Headphones, Ticket } from 'lucide-react';
+import { Heart, Box, DollarSign } from 'lucide-react'; // Importando nuevos íconos para donaciones
 
 const EventInfoSection = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -13,22 +13,22 @@ const EventInfoSection = () => {
 
   const eventImages = [
     {
-      source:'https://img.freepik.com/fotos-premium/chica-moderna-moda-auriculares-musica-fiesta-divertida-bailando-luces-neon-cultura-juvenil-vibrante-estilo-cyberpunk_187882-7371.jpg',
-      alt: 'Esperando informacion',
-      description: 'Esperando informacion',
-      additionalInfo: 'Esperando informacion'
+      source: 'https://images.pexels.com/photos/6591154/pexels-photo-6591154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      alt: 'Donación en línea',
+      description: 'Contribuye fácilmente',
+      additionalInfo: 'Haz tu donación en línea y contribuye a una buena causa.'
     },
     {
-      source: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH6shgPCQBrFbtanyhB1Z4QWwHIvgPQIrhAQ&s',
-      alt: 'Esperando informacion',
-      description: 'Esperando informacion',
-      additionalInfo: 'Esperando informacion'
+      source: 'https://images.pexels.com/photos/6994982/pexels-photo-6994982.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      alt: 'Caja de donaciones',
+      description: 'Donaciones físicas',
+      additionalInfo: 'Contribuye con donaciones físicas, alimentos y ropa para los necesitados.'
     },
     {
-      source: 'https://wallpapers.com/images/hd/club-party-background-1385ekvfxrhz9l14.jpg',
-      alt: 'Esperando informacion',
-      description: 'Esperando informacion',
-      additionalInfo: 'Esperando informacion'
+      source: 'https://images.pexels.com/photos/6995106/pexels-photo-6995106.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      alt: 'Recolección de fondos',
+      description: 'Participa en eventos de recaudación',
+      additionalInfo: 'Únete a nuestros eventos de recaudación y marca la diferencia.'
     }
   ];
 
@@ -37,8 +37,8 @@ const EventInfoSection = () => {
       <div className="max-w-7xl mx-auto">
 
         {/* Sección de donación */}
-        <div className="mb-8 bg-purple-600 text-white rounded-lg p-6 text-center shadow-lg">
-          <h2 className="text-2xl font-bold mb-2">¡Gracias por tu apoyo a la donación!</h2>
+        <div className="mb-8 bg-purple-600 text-purple-200 rounded-lg p-6 text-center shadow-lg">
+          <h2 className="text-3xl font-bold mb-2">¡Gracias por tu apoyo a la donación!</h2>
           <p className="text-lg">
             Hemos recolectado <span className="font-extrabold">{donationInfo.amount} {donationInfo.currency}</span> hasta ahora.
           </p>
@@ -48,13 +48,14 @@ const EventInfoSection = () => {
         </div>
 
         {/* Información del evento */}
-        <h2 className="text-3xl font-extrabold text-center mb-8 text-purple-500">Información del Evento</h2>
+        <h2 className="text-3xl font-extrabold text-center mb-8 text-purple-500">Información de Donaciones</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {eventImages.map((image, index) => (
             <div key={index} className="flex flex-col items-center">
-              {index === 0 && <Music className={`w-12 h-12 mb-4 transition-colors duration-300 ${isHovered ? 'text-purple-500' : 'text-white'}`} />}
-              {index === 1 && <Headphones className={`w-12 h-12 mb-4 transition-colors duration-300 ${isHovered ? 'text-purple-500' : 'text-white'}`} />}
-              {index === 2 && <Ticket className={`w-12 h-12 mb-4 transition-colors duration-300 ${isHovered ? 'text-purple-500' : 'text-white'}`} />}
+              {/* Íconos de donaciones */}
+              {index === 0 && <Heart className={`w-12 h-12 mb-4 transition-colors duration-300 ${isHovered ? 'text-purple-500' : 'text-white'}`} />} {/* Ícono de Corazón */}
+              {index === 1 && <Box className={`w-12 h-12 mb-4 transition-colors duration-300 ${isHovered ? 'text-purple-500' : 'text-white'}`} />} {/* Ícono de Caja */}
+              {index === 2 && <DollarSign className={`w-12 h-12 mb-4 transition-colors duration-300 ${isHovered ? 'text-purple-500' : 'text-white'}`} />} {/* Ícono de Dinero */}
               
               <h3 className="text-xl font-semibold mb-2">{image.description}</h3>
               <p className="text-center">{image.description.split(' ').slice(1).join(' ')}</p>
@@ -73,7 +74,7 @@ const EventInfoSection = () => {
         </div>
         <div className="text-center">
           <button
-            className="bg-white text-black font-bold py-2 px-4 rounded-full hover:bg-purple-700 hover:text-white transition duration-300"
+            className="bg-purple-600 text-white font-bold py-2 px-4 rounded-full hover:bg-purple-700 transition duration-300"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >

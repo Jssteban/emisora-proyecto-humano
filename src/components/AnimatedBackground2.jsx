@@ -15,7 +15,7 @@ const AnimatedBackground2 = ({ children }) => {
       <div 
         className="absolute inset-0 bg-cover bg-center animate-kenBurns"
         style={{
-          backgroundImage: "url('https://wallpapers.com/images/hd/live-concert-party-ft6boesubjrhdbfk.jpg')",
+          backgroundImage: "url('https://images.pexels.com/photos/7345444/pexels-photo-7345444.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')",
           filter: 'contrast(1.1) brightness(1.1)',
         }}
       ></div>

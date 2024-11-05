@@ -1,10 +1,10 @@
 import React from 'react';
 
 /**
- * Componente AnimatedBackground que aplica un fondo de GIF a su contenido.
+ * Componente AnimatedBackground que aplica un fondo de imagen a su contenido.
  * 
  * @param {object} props - Las propiedades del componente.
- * @param {React.ReactNode} props.children - Los elementos hijos que se renderizarán encima del fondo de GIF.
+ * @param {React.ReactNode} props.children - Los elementos hijos que se renderizarán encima del fondo de la imagen.
  * 
  * @returns {JSX.Element} El componente AnimatedBackground.
  */
@@ -12,22 +12,27 @@ const AnimatedBackground = ({ children }) => {
   return (
     <div className="relative min-h-screen overflow-hidden">
       {/* 
-        Fondo de GIF.
-        - `absolute`: Para posicionar el GIF de manera absoluta en relación al contenedor principal.
-        - `inset-0`: Asegura que el GIF cubra todo el contenedor.
-        - `w-full` y `h-full`: Hace que el GIF cubra el ancho y alto completos del contenedor.
-        - `z-0`: Coloca el GIF debajo del contenido.
+        Fondo de imagen.
+        - `absolute`: Para posicionar la imagen de manera absoluta en relación al contenedor principal.
+        - `inset-0`: Asegura que la imagen cubra todo el contenedor.
+        - `w-full` y `h-full`: Hace que la imagen cubra el ancho y alto completos del contenedor.
+        - `z-0`: Coloca la imagen debajo del contenido.
+        - `object-cover`: Asegura que la imagen mantenga su proporción y cubra todo el fondo.
       */}
-      <iframe
-        src="https://giphy.com/embed/W2bepwxaIJDt6VKfhN"
-        width="100%"
-        height="100%"
-        style={{ position: 'absolute', top: 0, left: 0, zIndex: 0, objectFit: 'cover' }}
-        frameBorder="0"
-        allowFullScreen
-        title="Animated Background"
-      ></iframe>
-      {/* Contenedor para el contenido que estará encima del GIF */}
+      <div
+        style={{
+          backgroundImage: 'url("https://images.pexels.com/photos/6646917/pexels-photo-6646917.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")',
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          zIndex: 0,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      ></div>
+      {/* Contenedor para el contenido que estará encima de la imagen */}
       <div className="relative z-10">
         {children}
       </div>
