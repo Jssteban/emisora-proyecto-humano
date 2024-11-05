@@ -15,14 +15,14 @@ const EventInfoSection = () => {
     {
       source: 'https://images.pexels.com/photos/6591154/pexels-photo-6591154.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       alt: 'Donación en línea',
-      description: 'Contribuye fácilmente',
+      description: 'Contribuye lorem',
       additionalInfo: 'Haz tu donación en línea y contribuye a una buena causa.'
     },
     {
       source: 'https://images.pexels.com/photos/6994982/pexels-photo-6994982.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       alt: 'Caja de donaciones',
       description: 'Donaciones físicas',
-      additionalInfo: 'Contribuye con donaciones físicas, alimentos y ropa para los necesitados.'
+      additionalInfo: 'Contribuye con donaciones .'
     },
     {
       source: 'https://images.pexels.com/photos/6995106/pexels-photo-6995106.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
