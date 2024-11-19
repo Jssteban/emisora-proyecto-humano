@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 /**
  * Componente CorporationInfo que muestra información sobre la Corporación Nuevo Talento Humano,
@@ -32,15 +33,17 @@ const CorporationInfo = () => {
     ];
 
     return (
-        <div className="bg-black text-white p-8 text-center">
+        <div className="bg-white text-green-600 p-8 text-center">
             {/* Sección de logo y título */}
             <div className="flex items-center justify-center mb-4">
-                <img 
-                    src="https://yt3.googleusercontent.com/ytc/AIdro_lmtQy50fgfWqKeNyiVHuWASOhIr8ROoig6a4IJC1ClsKc=s900-c-k-c0x00ffffff-no-rj" 
-                    alt="Corporación Logo" 
-                    className="w-16 h-16 mr-4 rounded-full object-cover" // Logo redondo
-                />
-                <h2 className="text-4xl font-bold text-purple-500">Corporación Nuevo Talento Humano</h2>
+                <Link to="/">
+                    <img 
+                        src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=262,fit=crop,q=95/Yanyz7vRZ9unz8Nb/logo-A85wrD0ONlc40jbk.jpg" 
+                        alt="Corporación Logo" 
+                        className="w-16 h-16 mr-4 rounded-full object-cover hover:opacity-80 transition-opacity duration-300"
+                    />
+                </Link>
+                <h2 className="text-4xl font-bold text-green-600">Corporación Nuevo Talento Humano</h2>
             </div>
 
             {/* Sección de descripción */}
@@ -67,7 +70,7 @@ const CorporationInfo = () => {
                             className="w-48 h-48 object-cover transition-transform duration-300 group-hover:scale-110"
                         />
                         {/* Capa de información superpuesta */}
-                        <div className="absolute inset-0 bg-black bg-opacity-75 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div className="absolute inset-0 bg-green-600 bg-opacity-75 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                             <p className="text-white text-center p-2">{image.info}</p>
                         </div>
                     </div>

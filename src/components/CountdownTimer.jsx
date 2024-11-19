@@ -72,7 +72,7 @@ const CountdownTimer = () => {
       </div> 
 
       {/* Botón para el evento */}
-       <Link to="/emisora" className="px-6 py-3 bg-purple-600 text-white font-bold rounded-full hover:bg-purple-700 transition duration-300">
+       <Link to="/" className="px-6 py-3 bg-green-700 text-white font-bold rounded-full hover:bg-green-600 transition duration-300">
         Donar Ahora
       </Link> 
     </div>
